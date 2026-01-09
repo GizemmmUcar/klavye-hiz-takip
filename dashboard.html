@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klavye Hız Takip - Analiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-keys">
+            <span class="key">W</span>
+            <span class="key">P</span>
+            <span class="key">M</span>
+            <span class="key">⌨</span>
+            <span class="key">↵</span>
+            <span class="key">⇧</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-keyboard"></i>
+                <span>Klavye Hız Takip</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-plus-circle"></i> Veri Girişi
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">
+                            <i class="bi bi-clock-history"></i> Geçmiş
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dashboard.html">
+                            <i class="bi bi-graph-up"></i> Analiz
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <!-- Page Header -->
+        <div class="text-center mb-5">
+            <h1 class="page-title">
+                <i class="bi bi-graph-up-arrow"></i>
+                Performans Analizi
+            </h1>
+            <p class="page-subtitle">Klavye hız testlerinizin detaylı analizi</p>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="row mb-4">
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon bg-primary-gradient">
+                        <i class="bi bi-collection"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-card-value" id="dashTotalTests">0</div>
+                        <div class="dashboard-card-label">Toplam Test</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon bg-success-gradient">
+                        <i class="bi bi-speedometer"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-card-value" id="dashAvgWpm">0</div>
+                        <div class="dashboard-card-label">Ortalama WPM</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon bg-warning-gradient">
+                        <i class="bi bi-trophy"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-card-value" id="dashBestWpm">0</div>
+                        <div class="dashboard-card-label">En Yüksek WPM</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="dashboard-card">
+                    <div class="dashboard-card-icon bg-danger-gradient">
+                        <i class="bi bi-x-octagon"></i>
+                    </div>
+                    <div class="dashboard-card-content">
+                        <div class="dashboard-card-value" id="dashAvgErrors">0</div>
+                        <div class="dashboard-card-label">Ortalama Hata</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row 1 -->
+        <div class="row mb-4">
+            <!-- WPM Line Chart -->
+            <div class="col-lg-8 mb-4">
+                <div class="card chart-card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="bi bi-graph-up text-primary"></i>
+                            WPM Değişim Grafiği (Çizgi Grafik)
+                        </h5>
+                        <span class="badge bg-primary">Nicel Veri Analizi</span>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="wpmLineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fatigue vs Errors Bar Chart -->
+            <div class="col-lg-4 mb-4">
+                <div class="card chart-card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="bi bi-bar-chart text-warning"></i>
+                            Yorgunluk - Hata İlişkisi
+                        </h5>
+                        <span class="badge bg-warning">Korelasyon Analizi</span>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="fatigueErrorsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row 2 -->
+        <div class="row mb-4">
+            <!-- Keyboard Type Performance -->
+            <div class="col-lg-6 mb-4">
+                <div class="card chart-card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="bi bi-keyboard text-info"></i>
+                            Klavye Türüne Göre Performans
+                        </h5>
+                        <span class="badge bg-info">Bağlamsal Veri Analizi</span>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="keyboardChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Environment Performance -->
+            <div class="col-lg-6 mb-4">
+                <div class="card chart-card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="bi bi-geo-alt text-success"></i>
+                            Ortama Göre Performans
+                        </h5>
+                        <span class="badge bg-success">Bağlamsal Veri Analizi</span>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="environmentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Insights Section -->
+        <div class="card insights-card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-lightbulb text-warning"></i>
+                    Analiz Sonuçları ve İçgörüler
+                </h5>
+            </div>
+            <div class="card-body">
+                <div id="insightsContainer" class="row">
+                    <!-- Dynamic insights will be added here -->
+                </div>
+                <div id="noInsights" class="text-center py-4" style="display: none;">
+                    <i class="bi bi-info-circle display-4 text-muted"></i>
+                    <p class="mt-3 text-muted">Analiz için yeterli veri yok. Daha fazla test kaydı ekleyin.</p>
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="bi bi-plus-circle"></i> Test Ekle
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="mb-0">
+                <i class="bi bi-keyboard"></i> Klavye Hız Takip Sistemi - 2026
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
