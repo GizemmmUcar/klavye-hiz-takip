@@ -1,18 +1,18 @@
-# ⌨️ Klavye Hız Takip Sistemi
+# Klavye Hız Takip Sistemi
 
 > Klavye yazma hızınızı takip edin, analiz edin ve geliştirin.
 
-**🌐 Canlı Demo:** [klavye-hiz-takip.vercel.app](https://klavye-hiz-takip.vercel.app)
+**Canlı Demo:** [klavye-hiz-takip.vercel.app](https://klavye-hiz-takip.vercel.app)
 
 ---
 
-## 📸 Ekran Görüntüleri
+## Ekran Görüntüleri
 
 > *(Görseller eklenecek — aşağıdaki adımları takip edin)*
 
 ---
 
-## 🚀 Proje Hakkında
+## Proje Hakkında
 
 **Klavye Hız Takip**, WPM (dakikada kelime) testlerinizi kayıt altına almanızı, geçmişinizi görüntülemenizi ve performansınızı grafiklerle analiz etmenizi sağlayan bir web uygulamasıdır.
 
@@ -20,22 +20,22 @@
 
 ---
 
-## ✨ Özellikler
+## Özellikler
 
-- 📝 **Veri Girişi** — WPM, hata sayısı, yorgunluk seviyesi, klavye türü ve ortam bilgisi kayıt
-- 📋 **Geçmiş** — Tüm test kayıtlarını listeleme, filtreleme ve silme
-- 📊 **Analiz Paneli** — 4 farklı grafik ile performans analizi:
+- **Veri Girişi** — WPM, hata sayısı, yorgunluk seviyesi, klavye türü ve ortam bilgisi kayıt
+- **Geçmiş** — Tüm test kayıtlarını listeleme, filtreleme ve silme
+- **Analiz Paneli** — 4 farklı grafik ile performans analizi:
   - WPM değişim çizgi grafiği
   - Yorgunluk–hata ilişkisi
   - Klavye türüne göre karşılaştırma
   - Ortama göre performans
-- 💡 **Otomatik İçgörüler** — Verilerinize göre öneriler ve tespitler
-- 💾 **Yerel Depolama** — Veriler tarayıcıda saklanır, sunucu gerekmez
-- 📱 **Responsive Tasarım** — Mobil ve masaüstü uyumlu
+- **Otomatik İçgörüler** — Verilerinize göre öneriler ve tespitler
+- **Yerel Depolama** — Veriler tarayıcıda saklanır, sunucu gerekmez
+- **Responsive Tasarım** — Mobil ve masaüstü uyumlu
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 
 | Teknoloji | Açıklama |
 |---|---|
@@ -49,7 +49,7 @@
 
 ---
 
-## 📁 Dosya Yapısı
+## Dosya Yapısı
 
 ```
 klavye-hiz-takip/
@@ -62,7 +62,7 @@ klavye-hiz-takip/
 
 ---
 
-## ⚙️ Kurulum & Çalıştırma
+## Kurulum & Çalıştırma
 
 Bu proje saf HTML/CSS/JS ile yazılmıştır. Kurulum gerekmez.
 
@@ -84,7 +84,7 @@ Tarayıcınızda `http://localhost:3000` adresine gidin.
 
 ---
 
-## 📊 Veri Türleri
+## Veri Türleri
 
 Uygulama üç farklı veri türü kullanır:
 
@@ -96,39 +96,8 @@ Uygulama üç farklı veri türü kullanır:
 
 ---
 
-## 📸 README'ye Görsel Ekleme
 
-Projeye ekran görüntüsü eklemek için:
 
-1. Uygulamayı tarayıcıda açın
-2. Her sayfanın ekran görüntüsünü alın (`screenshots/` klasörüne kaydedin)
-3. Dosyaları repoya ekleyin:
-   ```bash
-   git add screenshots/
-   git commit -m "docs: ekran görüntüleri eklendi"
-   git push
-   ```
-4. Bu README'deki `Ekran Görüntüleri` bölümünü güncelleyin:
-   ```markdown
-   ![Veri Girişi](screenshots/index.png)
-   ![Analiz](screenshots/dashboard.png)
-   ```
-
----
-
-## 🤝 Katkıda Bulunma
-
-1. Bu repoyu fork'layın
-2. Yeni bir branch oluşturun (`git checkout -b feature/yeni-ozellik`)
-3. Değişikliklerinizi commit edin (`git commit -m 'feat: yeni özellik'`)
-4. Branch'i push edin (`git push origin feature/yeni-ozellik`)
-5. Pull Request açın
-
----
-
-## 📄 Lisans
-
-Bu proje MIT Lisansı ile lisanslanmıştır.
 
 ---
 
