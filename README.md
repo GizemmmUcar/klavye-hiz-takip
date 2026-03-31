@@ -15,14 +15,7 @@
 Öğrenciler, yazılımcılar ve hız yazma meraklıları için tasarlanmıştır.
 
 ---
-## Ekran Görüntüleri
 
-
-<img width="902" height="855" alt="Ekran görüntüsü 2026-03-31 101332" src="https://github.com/user-attachments/assets/3d4f3cde-cd60-4539-9d61-d9cc1af75135" />
-<img width="915" height="846" alt="Ekran görüntüsü 2026-03-31 101342" src="https://github.com/user-attachments/assets/5128324b-3748-4544-b2a5-caf6519b3edd" />
-<img width="921" height="851" alt="Ekran görüntüsü 2026-03-31 101351" src="https://github.com/user-attachments/assets/3ada1e16-b3d3-4f2d-a4c2-045240ce38da" />
-
----
 
 ## Özellikler
 
@@ -36,6 +29,14 @@
 - **Otomatik İçgörüler** — Verilerinize göre öneriler ve tespitler
 - **Yerel Depolama** — Veriler tarayıcıda saklanır, sunucu gerekmez
 - **Responsive Tasarım** — Mobil ve masaüstü uyumlu
+
+---
+## Ekran Görüntüleri
+
+
+<img width="902" height="855" alt="Ekran görüntüsü 2026-03-31 101332" src="https://github.com/user-attachments/assets/3d4f3cde-cd60-4539-9d61-d9cc1af75135" />
+<img width="915" height="846" alt="Ekran görüntüsü 2026-03-31 101342" src="https://github.com/user-attachments/assets/5128324b-3748-4544-b2a5-caf6519b3edd" />
+<img width="921" height="851" alt="Ekran görüntüsü 2026-03-31 101351" src="https://github.com/user-attachments/assets/3ada1e16-b3d3-4f2d-a4c2-045240ce38da" />
 
 ---
 
